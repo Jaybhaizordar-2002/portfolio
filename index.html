@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Jayesh Vijay Vargiaya | Portfolio</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Portfolio of Jayesh Vijay Vargiaya - Computer Science (AIML) Student and Developer">
+    
+    <style>
+        :root {
+            --primary: #0f172a;
+            --secondary: #1e293b;
+            --accent: #38bdf8;
+            --bg: #f1f5f9;
+            --card: #ffffff;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Segoe UI', sans-serif;
+            background: var(--bg);
+            color: #333;
+            line-height: 1.6;
+        }
+
+        /* ===== HEADER ===== */
+        header {
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            color: white;
+            padding: 80px 20px 60px;
+            text-align: center;
+        }
+
+        header img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 4px solid var(--accent);
+            margin-bottom: 20px;
+        }
+
+        header h1 {
+            font-size: clamp(1.8rem, 4vw, 2.8rem);
+        }
+
+        header p {
+            margin-top: 10px;
+            font-size: 1.1rem;
+            opacity: 0.9;
+        }
+
+        /* ===== NAVBAR ===== */
+        nav {
+            position: sticky;
+            top: 0;
+            background: var(--secondary);
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            z-index: 1000;
+        }
+
+        nav a {
+            color: white;
+            padding: 15px 20px;
+            text-decoration: none;
+            font-weight: 500;
+            transition: 0.3s;
+        }
+
+        nav a:hover {
+            background: var(--accent);
+            color: var(--primary);
+        }
+
+        /* ===== SECTIONS ===== */
+        section {
+            padding: 70px 20px;
+            max-width: 1100px;
+            margin: auto;
+        }
+
+        section h2 {
+            text-align: center;
+            margin-bottom: 50px;
+            font-size: clamp(1.6rem, 3vw, 2.2rem);
+            color: var(--primary);
+        }
+
+        /* ===== ABOUT ===== */
+        .about p {
+            max-width: 750px;
+            margin: auto;
+            text-align: center;
+            font-size: 1.05rem;
+        }
+
+        /* ===== SKILLS ===== */
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            gap: 25px;
+        }
+
+        .skill-card {
+            background: var(--card);
+            padding: 25px;
+            border-radius: 12px;
+            box-shadow: 0 6px 15px rgba(0,0,0,0.05);
+            transition: transform 0.3s ease;
+        }
+
+        .skill-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .skill-card h3 {
+            margin-bottom: 10px;
+            color: var(--secondary);
+        }
+
+        /* ===== EXPERIENCE & PROJECTS ===== */
+        .card {
+            background: var(--card);
+            padding: 25px;
+            margin-bottom: 25px;
+            border-radius: 12px;
+            box-shadow: 0 6px 15px rgba(0,0,0,0.05);
+        }
+
+        .card h3 {
+            margin-bottom: 8px;
+            color: var(--secondary);
+        }
+
+        .card p {
+            margin-bottom: 10px;
+        }
+
+        ul {
+            margin-left: 20px;
+        }
+
+        /* ===== CONTACT ===== */
+        .contact {
+            text-align: center;
+        }
+
+        .contact a {
+            display: inline-block;
+            margin: 10px;
+            text-decoration: none;
+            font-weight: 600;
+            color: var(--secondary);
+            transition: 0.3s;
+        }
+
+        .contact a:hover {
+            color: var(--accent);
+        }
+
+        /* ===== FOOTER ===== */
+        footer {
+            background: var(--primary);
+            color: white;
+            text-align: center;
+            padding: 20px;
+            margin-top: 50px;
+        }
+
+        /* ===== MOBILE IMPROVEMENTS ===== */
+        @media (max-width: 768px) {
+            nav {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            nav a {
+                width: 100%;
+                text-align: center;
+                border-top: 1px solid rgba(255,255,255,0.1);
+            }
+
+            header {
+                padding: 60px 15px 40px;
+            }
+
+            section {
+                padding: 50px 15px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            header img {
+                width: 120px;
+                height: 120px;
+            }
+
+            .skills-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+    </style>
+</head>
+
+<body>
+
+<header>
+    <img src="your-photo.jpg" alt="Profile Photo">
+    <h1>Jayesh Vijay Vargiaya</h1>
+    <p>B.Tech Computer Science (AIML) | Aspiring Software Developer</p>
+</header>
+
+<nav>
+    <a href="#about">About</a>
+    <a href="#skills">Skills</a>
+    <a href="#experience">Experience</a>
+    <a href="#projects">Projects</a>
+    <a href="#contact">Contact</a>
+</nav>
+
+<section id="about" class="about">
+    <h2>About Me</h2>
+    <p>
+        I am a Computer Science (AIML) student passionate about backend development, system design, and building real-world applications. 
+        I enjoy solving complex problems and continuously learning new technologies.
+    </p>
+</section>
+
+<section id="skills">
+    <h2>Technical Skills</h2>
+    <div class="skills-grid">
+        <div class="skill-card">
+            <h3>Languages</h3>
+            <p>Python, Java, SQL</p>
+        </div>
+        <div class="skill-card">
+            <h3>Web</h3>
+            <p>HTML, CSS, JavaScript, React</p>
+        </div>
+        <div class="skill-card">
+            <h3>Tools</h3>
+            <p>Git, Docker, Linux, VS Code</p>
+        </div>
+        <div class="skill-card">
+            <h3>Core Subjects</h3>
+            <p>Data Structures, Algorithms, DBMS, Operating Systems</p>
+        </div>
+    </div>
+</section>
+
+<section id="experience">
+    <h2>Experience</h2>
+    <div class="card">
+        <h3>Web Designing Intern | Scholiverse Educare Pvt. Ltd.</h3>
+        <p><strong>March 2025 – December 2025</strong></p>
+        <ul>
+            <li>Organized files, spreadsheets, and technical reports.</li>
+            <li>Collaborated with teams to solve technical challenges.</li>
+            <li>Participated in workshops and technical presentations.</li>
+            <li>Explored new tools to improve workflow efficiency.</li>
+        </ul>
+    </div>
+</section>
+
+<section id="projects">
+    <h2>Projects</h2>
+
+    <div class="card">
+        <h3>Chat Box Java Application</h3>
+        <p><a href="#" target="_blank">GitHub Link</a></p>
+        <ul>
+            <li>Built real-time chat using Java Swing & TCP sockets.</li>
+            <li>Implemented multi-client client-server architecture.</li>
+            <li>Applied multithreading for concurrency.</li>
+        </ul>
+    </div>
+
+    <div class="card">
+        <h3>CureQuest – Healthcare Management Backend</h3>
+        <p><a href="#" target="_blank">GitHub Link</a></p>
+        <ul>
+            <li>Developed REST APIs using Spring Boot.</li>
+            <li>Implemented JWT authentication & RBAC.</li>
+            <li>Used JPA, Hibernate & MySQL in layered architecture.</li>
+        </ul>
+    </div>
+
+</section>
+
+<section id="contact" class="contact">
+    <h2>Contact</h2>
+    <p>Email: <a href="mailto:vijayvargiayajay@gmail.com">vijayvargiayajay@gmail.com</a></p>
+    <p>Phone: 8305661178 / 7869212975</p>
+    <a href="https://www.linkedin.com/in/jayesh-vijayvargiaya-36a8a1229" target="_blank">LinkedIn</a>
+    <a href="https://github.com/Jaybha" target="_blank">GitHub</a>
+</section>
+
+<footer>
+    <p>© 2026 Jayesh Vijay Vargiaya. All Rights Reserved.</p>
+</footer>
+
+</body>
+</html>
